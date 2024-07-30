@@ -1,0 +1,43 @@
+[
+  {
+    "bannerImage": "https://kachabazar-store.vercel.app/page-header-bg.jpg",
+    "offerProducts": [
+      {
+        "offerProductImage": "https://picsum.photos/200/300",
+        "offerName": "October Gift Voucher",
+        "offerPercentage": 10,
+        "offerRemainingTime": "10 December 2022",
+        "status": "Inactive",
+        "couponDescription": "* This coupon code will apply on Grocery type products and when you shopping more then $500",
+        "coupon":"october21"
+      },
+      {
+        "offerProductImage": "https://picsum.photos/id/237/200/300",
+        "offerName": "October Gift Voucher",
+        "offerPercentage": 25,
+        "offerRemainingTime": "09 December 2022",
+        "status": "Active",
+        "couponDescription": "* This coupon code will apply on Grocery type products and when you shopping more then $500",
+        "coupon":"november32"
+      },
+      {
+        "offerProductImage": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F23kQcB9%2Fins3.jpg&w=128&q=75",
+        "offerName": "October Gift Voucher",
+        "offerPercentage": 70,
+        "offerRemainingTime": "2022-12-08 15:53:50",
+        "status": "Inactive",
+        "couponDescription": "* This coupon code will apply on Grocery type products and when you shopping more then $500",
+        "coupon":"december07"
+      },
+      {
+        "offerProductImage": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F23kQcB9%2Fins3.jpg&w=128&q=75",
+        "offerName": "October Gift Voucher",
+        "offerPercentage": 70,
+        "offerRemainingTime": "2022-12-08 15:53:50",
+        "status": "Inactive",
+        "couponDescription": "* This coupon code will apply on Grocery type products and when you shopping more then $500",
+        "coupon":"december07"
+      }
+    ]
+  }
+]
