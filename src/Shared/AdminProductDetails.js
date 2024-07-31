@@ -66,8 +66,12 @@ const AdminProductDetails = ({ product }) => {
               Category <span className="text-[17px]">:</span> {product?.category}
             </p>
             <p className="text-sm mb-2">
-              SubCategory <span className="text-[17px]">:</span>{" "}
-              {product?.subCategory}
+              First Child Category <span className="text-[17px]">:</span>{" "}
+              {product?.first_child_category}
+            </p>
+            <p className="text-sm mb-2">
+              Second Child Category: {product?.second_child_category?.map((child,index)=><span key={index} className="text-[17px] mr-1">{child},</span>)} 
+              
             </p>
             <hr />
 

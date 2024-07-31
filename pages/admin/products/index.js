@@ -159,8 +159,8 @@ const Product = () => {
                 Category
               </option>
               {categories?.data?.result.map((category) => (
-                <option value={category?.parentCategory} key={category._id}>
-                  {category?.parentCategory}
+                <option value={category?.parent_category} key={category._id}>
+                  {category?.parent_category}
                 </option>
               ))}
             </select>
