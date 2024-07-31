@@ -22,12 +22,15 @@ const Shop = () => {
   const [showFilter, setShowFilter] = useState(false);
 
 
-  const newCurrentItems = [...currentItems].sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const newCurrentItems = [...currentItems]?.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
+  
 
   const { data, isLoading, refetch } = useQuery(
     ["products", queryFilterPrice],
     () => products(queryFilterPrice)
   );
+
+  // console.log("-------------------data",data)
   const {
     data: categories,
     isLoading: categoryLoading,
@@ -83,7 +86,7 @@ const Shop = () => {
         className="bg-white p-3 md:p-5 rounded-md mb-1 md:mb-6"
       >
         <div className="pb-3">
-          <h3 className="text-[#39404a] font-bold text-sm ">FILTER BY PRICE</h3>
+          <h3 className="text-[#39404a] font-bold text-sm ">Filter By Price</h3>
         </div>
         <div className="filter-body">
           <div className="grid grid-cols-2 gap-2">
@@ -116,7 +119,7 @@ const Shop = () => {
       <div className="bg-white p-3  md:p-5 rounded-md mb-1 md:mb-6">
         <div className="pb-3">
           <h3 className="text-[#39404a] font-bold text-sm ">
-            FILTER BY CATEGORY
+          Filter By Category
           </h3>
         </div>
         {/* filter by category */}
@@ -130,10 +133,9 @@ const Shop = () => {
       <div className="bg-white p-3 md:p-5 rounded-md mb-1 md:mb-6">
         <div className="pb-3">
           <h3 className="text-[#39404a] font-bold text-sm ">
-            FILTER BY SUB CATEGORY
+            Filter By First Child  Category
           </h3>
         </div>
-        {/* ---------------sub category------------- */}
         <FilterBySubCategory
           categories={categories}
           setQueryFilter={setQueryFilterPrice}

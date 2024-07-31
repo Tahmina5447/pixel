@@ -188,7 +188,7 @@ body {
 #catagory-menu li a {
   display: block;
 
-  padding: 7px 15px;
+  padding: 5px 15px;
   background: white;
   /* font-weight: bold; */
 }
@@ -199,7 +199,6 @@ body {
 
 #catagory-menu {
   position: relative;
-  height: 380px;
 }
 
 #catagory-menu li a:hover {
@@ -215,7 +214,7 @@ body {
 #catagory-menu li ul {
   position: absolute;
   top: -5px;
-  left: 295px;
+  /* left: 295px; */
   z-index: 3;
   transition: opacity 0.6s;
   opacity: 1;
@@ -223,6 +222,7 @@ body {
   width: 200px;
   /* height: 100px; */
 }
+
 
 /* #catagory-menu li:hover > ul {
   transition: opacity 0.6s;
@@ -235,7 +235,7 @@ body {
 
 #catagory-menu li ul li a {
   display: block;
-  padding: 5px 30px;
+  padding: 5px 15px;
   /* background: gray; */
   margin: 2px 0;
 }

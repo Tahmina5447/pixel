@@ -7,6 +7,7 @@ const FilterBySubCategory = ({ categories, setQueryFilter, refetch }) => {
   useEffect(() => {
     getProducts();
   }, [selectedCategories]);
+  // console.log("sub -------------------",selectedCategories)
 
   const handleFilterBySubCategory = (event) => {
     const category = event.target.value;
@@ -22,7 +23,7 @@ const FilterBySubCategory = ({ categories, setQueryFilter, refetch }) => {
   const getProducts = async () => {
     const params = new URLSearchParams();
     selectedCategories.forEach((category) => {
-      params.append("subCategory", category);
+      params.append("first_child_category", category);
     });
     const url = `${params.toString()}`;
 
@@ -39,7 +40,7 @@ const FilterBySubCategory = ({ categories, setQueryFilter, refetch }) => {
         {categories?.data?.result?.map((item) => {
           return (
             <>
-              {item?.childCategory.map((child, index) => {
+              {item?.first_child_Category?.map((child, index) => {
                 return (
                   <label
                     key={index}
@@ -49,11 +50,11 @@ const FilterBySubCategory = ({ categories, setQueryFilter, refetch }) => {
                       onChange={handleFilterBySubCategory}
                       type="checkbox"
                       className="checkbox border-2 border-[#777] checkbox-sm rounded-xs checkbox-primary"
-                      value={child}
-                      checked={selectedCategories.includes(child)}
+                      value={child?.firstChildTitle}
+                      checked={selectedCategories.includes(child?.firstChildTitle)}
                     />
                     <span className="text-[#777] font-bold text-sm  capitalize hover:text-primary">
-                      {child}
+                      {child?.firstChildTitle}
                     </span>
                   </label>
                 );

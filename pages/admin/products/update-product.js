@@ -199,8 +199,8 @@ const UpdateProduct = () => {
       tags: selectedProductTag,
       stock: data.stock,
       quantity: data.quantity,
-      offer_discount: Number(data?.offer_discount) || product.offer_discount,
-      offer_quantity: Number(data?.offer_quantity) || product.offer_quantity,
+      // offer_discount: Number(data?.offer_discount) || product.offer_discount,
+      // offer_quantity: Number(data?.offer_quantity) || product.offer_quantity,
       imageURLs: imageUrl, //------------array
       size: selectedOptionSize,
       type: data?.type || product?.type,
@@ -208,7 +208,7 @@ const UpdateProduct = () => {
       youtube: data.youtube || product.youtube,
       status: data.status,
       variantType: data?.variantType === "true" ? true : false,
-      delivery: data?.delivery,
+      // delivery: data?.delivery,
       // attributes: {
       //   colors: selectColor ? productColor : "",
       //   sizes: selectSize ? productSize : "",
@@ -263,8 +263,8 @@ const UpdateProduct = () => {
       discount: product.discount,
       tags: selectedProductTag,
       stock: product.stock,
-      offer_discount: product.offer_discount,
-      offer_quantity: product.offer_quantity,
+      // offer_discount: product.offer_discount,
+      // offer_quantity: product.offer_quantity,
       imageURLs: imageUrl, //------------array
       size: selectedOption,
       type: product?.type,
@@ -279,31 +279,30 @@ const UpdateProduct = () => {
         others: selectOther ? productOther : "",
       },
     };
-console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
     // ------------------------------------------------post method here
-    // fetch(`http://localhost:5000/api/v1/product/${product._id}`, {
-    //   method: "PUT",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: `Bearer ${getAdminToken()}`,
-    //   },
-    //   body: JSON.stringify(updateProduct),
-    // })
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     if (result.status == "success") {
-    //       setVariantLoading(false);
-    //       swal("Product updated successfully.", {
-    //         icon: "success",
-    //       });
-    //       setReload(!reload);
-    //     } else {
-    //       setVariantLoading(false);
-    //       swal(result.error, {
-    //         icon: "error",
-    //       });
-    //     }
-    //   });
+    fetch(`http://localhost:5000/api/v1/product/${product._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getAdminToken()}`,
+      },
+      body: JSON.stringify(updateProduct),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.status == "success") {
+          setVariantLoading(false);
+          swal("Product updated successfully.", {
+            icon: "success",
+          });
+          setReload(!reload);
+        } else {
+          setVariantLoading(false);
+          swal(result.error, {
+            icon: "error",
+          });
+        }
+      });
   };
 
   // --------------------------------------------handle image upload
@@ -689,7 +688,7 @@ console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
 
           {!showVariant ? (
             <>
-              <div className="block md:flex gap-5 mb-4">
+              {/* <div className="block md:flex gap-5 mb-4">
                 <div className="w-full md:w-[30%] text-lg font-semibold mt-3">
                   <p>Offer Quantity</p>
                 </div>
@@ -714,9 +713,9 @@ console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
                     {errors?.offer_quantity?.message}
                   </small>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="block md:flex gap-5 mb-4">
+              {/* <div className="block md:flex gap-5 mb-4">
                 <div className="w-full md:w-[30%] text-lg font-semibold mt-3">
                   <p>Offer Discount Price</p>
                 </div>
@@ -741,7 +740,7 @@ console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
                     {errors?.offer_discount?.message}
                   </small>
                 </div>
-              </div>
+              </div> */}
             </>
           ) : (
             <></>
@@ -806,7 +805,7 @@ console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
             </div>
           </div>
 
-          <div className="block md:flex items-center gap-5 mb-4">
+          {/* <div className="block md:flex items-center gap-5 mb-4">
             <div className="w-full md:w-[30%] text-lg font-semibold mt-3">
               <p>Free Delivery</p>
             </div>
@@ -819,7 +818,7 @@ console.log(",,,,,,,,,,,,,,,,",selectedOptionCategory)
                 <option value={true}>Yes</option>
               </select>
             </div>
-          </div>
+          </div> */}
 
           <div className="block md:flex items-center gap-5 mb-4">
             <div className="w-full md:w-[30%] text-lg font-semibold mt-3">

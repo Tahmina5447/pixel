@@ -8,7 +8,7 @@ const FilterByCategoryRow = ({
   refetch,
 }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
-
+// console.log("--------------main",selectedCategories)
 
   useEffect(() => {
     getProducts();
@@ -48,11 +48,11 @@ const FilterByCategoryRow = ({
               onChange={handleFilterByCategory}
               type="checkbox"
               className="checkbox border-2 border-[#777] checkbox-sm rounded-xs checkbox-primary"
-              value={item?.parentCategory}
-              checked={selectedCategories.includes(item?.parentCategory)}
+              value={item?.parent_category}
+              checked={selectedCategories.includes(item?.parent_category)}
             />
             <span className="text-[#777] font-bold text-sm mt-[2px]  capitalize hover:text-primary">
-              {item?.parentCategory}
+              {item?.parent_category}
             </span>
           </label>
         ))}

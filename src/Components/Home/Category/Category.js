@@ -46,7 +46,7 @@ const Category = ({ catagories }) => {
                       // setQueryFromCategory(
                       //   `category=${category.parentCategory}`
                       // )
-                      handelCategoryParams(category.parentCategory)
+                      handelCategoryParams(category.parent_category)
                     }
                     className="  "
                   >
@@ -60,7 +60,7 @@ const Category = ({ catagories }) => {
                       />
                       <div className="bg-black/20 absolute top-0 left-0 w-full h-full"></div>
                       <h1 className="text-white text-2xl font-medium lg:font-[300] absolute left-5 md:text-[34px] bottom-5 avenir2">
-                        {category.parentCategory}
+                        {category.parent_category}
                       </h1>
                     </div>
                   </Link>
