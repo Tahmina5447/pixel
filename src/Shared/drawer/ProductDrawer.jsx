@@ -77,7 +77,7 @@ const ProductDrawer = ({
         _id: product?._id,
         createdAt: new Date().toString(),
         image: product.imageURLs[0],
-        category: product?.category,
+        parent_category: product?.parent_category,
         quantity: 1,
         productTitle: product?.name,
         delivery: product?.delivery,

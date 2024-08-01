@@ -67,7 +67,7 @@ const SelectProduct = ({ setGetProductId, setShow, getProductId }) => {
                 createdAt: new Date().toString(),
                 imageUrls: product?.imageURLs,
                 image: product.imageURLs[0],
-                category: product?.category,
+                parent_category: product?.parent_category,
                 quantity: 1,
                 productTitle: product?.name,
                 sku: "",

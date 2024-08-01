@@ -14,6 +14,7 @@ import CustomPagination from "../../src/Shared/CustomPagination";
 import LoadingComponets from "../../src/Shared/LoadingComponets";
 import CustomProductSectionSkeleton from "../../src/Components/CustomSkeleton/CustomProductSectionSkeleton";
 import { Icon } from "@iconify/react";
+import FilterBySecondChildCategory from "../../src/Components/Shop/FilterBySecondChildCategory";
 const Shop = () => {
   const [queryFilterPrice, setQueryFilterPrice] = useState("");
   const [isOpen, setIsOpen] = React.useState(false);
@@ -137,6 +138,18 @@ const Shop = () => {
           </h3>
         </div>
         <FilterBySubCategory
+          categories={categories}
+          setQueryFilter={setQueryFilterPrice}
+          refetch={refetch}
+        />
+      </div>
+      <div className="bg-white p-3 md:p-5 rounded-md mb-1 md:mb-6">
+        <div className="pb-3">
+          <h3 className="text-[#39404a] font-bold text-sm ">
+            Filter By Second Child  Category
+          </h3>
+        </div>
+        <FilterBySecondChildCategory
           categories={categories}
           setQueryFilter={setQueryFilterPrice}
           refetch={refetch}

@@ -116,7 +116,7 @@ const CheckOut = ({ data, loading }) => {
       type: p?.type,
       variant: p?.userSize?._id,
       variantType: p?.variantType,
-      category: p.category,
+      parent_category: p?.parent_category,
       offer_quantity: p?.variantType
         ? p?.userSize.offer_quantity
         : p?.offer_quantity,
